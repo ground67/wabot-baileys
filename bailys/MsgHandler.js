@@ -1,7 +1,7 @@
+// PROSESSS SABAR YAK XIXIXIX
+//process.on('uncaughtException', console.error) // safe log error
 
-process.on('uncaughtException', console.error) // safe log error
-
-const sotoy = [
+/*const sotoy = [
         '🍊 : 🍒 : 🍐 upss coba lagi',
         '🍒 : 🔔 : 🍊 upss coba lagi',
         '🍇 : 🍇 : 🍐 upss coba lagi',
@@ -109,4 +109,4 @@ const _badword = JSON.parse(fs.readFileSync('./data/lib/badword.json'))
 const bad = JSON.parse(fs.readFileSync('./data/lib/bad.json'))
 const reminder = require("./lib/reminder");
 const { jadibot, stopjadibot, listjadibot } = require("./data/lib/jadibot");
-const _reminder = JSON.parse(fs.readFileSync("./data/lib/reminder.json"));
+const _reminder = JSON.parse(fs.readFileSync("./data/lib/reminder.json"));*/
