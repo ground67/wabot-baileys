@@ -101,7 +101,7 @@ async function starts() {
                 ini_user = reysekha.contacts[mem]
                 group_info = await reysekha.groupMetadata(chat.jid)
                 ini_img = await getBuffer(`${apiHadi}/api/base/leave?apikey=${hadiKey}&img1=${pp_user}&img2=${pp_group}&background=https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg&username=${ini_user.notify}&member=${group_info.participants.length}&groupname= ${group_info.subject}`)
-                ini_out = `${ini_user.notify}, Sayonara 👋`
+                ini_out = `${ini_user.notify}, Sayonara ðŸ‘‹`
                 await reysekha.sendMessage(chat.jid, ini_img, MessageType.image, { caption: welkam })
             }
         } catch (e) {
@@ -642,27 +642,27 @@ const fvideo = (teks) => {
                          gmbrnya = fs.readFileSync('./stik/menu.jpg')
                          orgnya = `0@s.whatsapp.net`
                          menunya =`
-� *Owner : Rey sekha*
-� *Lib : @adiwajshing/bailys*
-� *Web : www.erza-info.ml*
-� *Api's : ${apiUrl}*
-� *Github : github.com/inirey*
+• *Owner : Rey sekha*
+• *Lib : @adiwajshing/bailys*
+• *Web : www.erza-info.ml*
+• *Api's : ${apiUrl}*
+• *Github : github.com/inirey*
 
 *#LIST MENU*
-� *${prefix}menuislami*
-� *${prefix}menudownloader*
-� *${prefix}menumovie*
-� *${prefix}menusearching*
-� *${prefix}menurandomtext*
-� *${prefix}menuanime*
-� *${prefix}menuinformasi*
-� *${prefix}menuentertainmen*
-� *${prefix}menucreator*
-� *${prefix}menuprimbon*
-� *${prefix}menutextpro*
-� *${prefix}menuphotoxry*
-� *${prefix}menurandomimg*
-� *${prefix}menuother*
+• *${prefix}menuislami*
+• *${prefix}menudownloader*
+• *${prefix}menumovie*
+• *${prefix}menusearching*
+• *${prefix}menurandomtext*
+• *${prefix}menuanime*
+• *${prefix}menuinformasi*
+• *${prefix}menuentertainmen*
+• *${prefix}menucreator*
+• *${prefix}menuprimbon*
+• *${prefix}menutextpro*
+• *${prefix}menuphotoxry*
+• *${prefix}menurandomimg*
+• *${prefix}menuother*
 `
 sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrnya}, [{buttonId:`${prefix}donate`,buttonText:{displayText:'donasi'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'owner'},type:1}], {contextInfo: { mentionedJid: [orgnya]}})
        break
@@ -815,7 +815,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                 case 'playmp4':
                     if (args.length == 0) return await reply(`Example: ${prefix + command} melukis senja`)
                     anu = await fetchJson(`${apiUrl}/api/yt/playmp4?query=${args.join(" ")}&apikey=${apikey}`)
-                    ingfonya = *DATA BERHASIL DI DAPATKAN*\n\n� *judul : ${anu.title}\n� *chanel : ${anu.channel}\n� *published : ${anu.published}\n� *views : ${anu.views}`
+                    ingfonya = `*DATA BERHASIL DI DAPATKAN*\n\n• *judul : ${anu.title}\n• *chanel : ${anu.channel}\n• *published : ${anu.published}\n• *views : ${anu.views}`
                     beep2 = await getBuffer(anu.thumb)
                     sendButImage(from, `${ingfonya}`, `Made by Rey `, beep2, [
             {
@@ -832,7 +832,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                 case 'play':
                     if (args.length == 0) return await reply(`Example: ${prefix + command} melukis senja`)
                     anu = await fetchJson(`${apiUrl}/api/yt/playmp3?query=${args.join(" ")}&apikey=${apikey}`)
-                    ingfonya = *DATA BERHASIL DI DAPATKAN*\n\n� *judul : ${anu.result.title}\n� *chanel : ${anu.result.channel}\n� *published : ${anu.result.published}\n� *views : ${anu.result.views}`
+                    ingfonya = `*DATA BERHASIL DI DAPATKAN*\n\n• *judul : ${anu.result.title}\n• *chanel : ${anu.result.channel}\n• *published : ${anu.result.published}\n• *views : ${anu.result.views}`
                     beep = await getBuffer(anu.result.thumb)
                     sendButImage(from, `${ingfonya}`, `Made by Rey `, beep, [
             {
@@ -872,7 +872,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
         );
         var info = anu.result
         var buffer = await getBuffer(info.album);
-        sendButLocation(from, `*DATA BERHASIL DI DAPATKAN* `, `� *TITLE*: ${info.title}\n� *VIEWS*: ${info.viewer}\n� *LIKE*: ${info.like}\n� *DISLIKE*: ${info.dislike}\n� *DESC*: ${info.desc}`, {jpegThumbnail:buffer}, [{buttonId:`${prefix}ytdl ${args[0]}|ytaudio`,buttonText:{displayText:'AUDIO'},type:1},{buttonId:`${prefix}ytdl ${args[0]}|ytvideo`,buttonText:{displayText:'VIDEO'},type:1}], {contextInfo: { mentionedJid: [targetpc]}})
+        sendButLocation(from, `*DATA BERHASIL DI DAPATKAN* `, `• *TITLE*: ${info.title}\n• *VIEWS*: ${info.viewer}\n• *LIKE*: ${info.like}\n• *DISLIKE*: ${info.dislike}\n• *DESC*: ${info.desc}`, {jpegThumbnail:buffer}, [{buttonId:`${prefix}ytdl ${args[0]}|ytaudio`,buttonText:{displayText:'AUDIO'},type:1},{buttonId:`${prefix}ytdl ${args[0]}|ytvideo`,buttonText:{displayText:'VIDEO'},type:1}], {contextInfo: { mentionedJid: [targetpc]}})
         break
                  case 'ytdl':
         var gh = args.join("");
@@ -1471,21 +1471,21 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                     get_result = await fetchJson(`${apiUrl}/api/jaraktempuh?apikey=${apikey}&kota1=${teks1}&kota2=${teks2}`)
                     x = get_result.result
                     ini_txt = `Informasi Jarak dari ${teks1} ke ${teks2} :\n\n`
-                    ini_txt += `\`\`\`◪ Asal :\`\`\` ${x.from.name}\n`
-                    ini_txt += `\`\`\`◪ Garis Lintang :\`\`\` ${x.from.latitude}\n`
-                    ini_txt += `\`\`\`◪ Garis Bujur :\`\`\` ${x.from.longitude}\n\n`
-                    ini_txt += `\`\`\`◪ Tujuan :\`\`\` ${x.to.name}\n`
-                    ini_txt += `\`\`\`◪ Garis Lintang :\`\`\` ${x.to.latitude}\n`
-                    ini_txt += `\`\`\`◪ Garis Bujur :\`\`\` ${x.to.longitude}\n\n`
-                    ini_txt += `\`\`\`◪ Jarak Tempuh :\`\`\` ${x.jarak}\n`
-                    ini_txt += `\`\`\`◪ Waktu Tempuh :\`\`\`\n`
-                    ini_txt += `   ╭───────────────❏\n`
-                    ini_txt += `❍┤ Kereta Api : ${x.kereta_api}\n`
-                    ini_txt += `❍┤ Pesawat : ${x.pesawat}\n`
-                    ini_txt += `❍┤ Mobil : ${x.mobil}\n`
-                    ini_txt += `❍┤ Motor : ${x.motor}\n`
-                    ini_txt += `❍┤ Jalan Kaki : ${x.jalan_kaki}\n`
-                    ini_txt += `   ╰───────────────❏\n`
+                    ini_txt += `\`\`\`â—ª Asal :\`\`\` ${x.from.name}\n`
+                    ini_txt += `\`\`\`â—ª Garis Lintang :\`\`\` ${x.from.latitude}\n`
+                    ini_txt += `\`\`\`â—ª Garis Bujur :\`\`\` ${x.from.longitude}\n\n`
+                    ini_txt += `\`\`\`â—ª Tujuan :\`\`\` ${x.to.name}\n`
+                    ini_txt += `\`\`\`â—ª Garis Lintang :\`\`\` ${x.to.latitude}\n`
+                    ini_txt += `\`\`\`â—ª Garis Bujur :\`\`\` ${x.to.longitude}\n\n`
+                    ini_txt += `\`\`\`â—ª Jarak Tempuh :\`\`\` ${x.jarak}\n`
+                    ini_txt += `\`\`\`â—ª Waktu Tempuh :\`\`\`\n`
+                    ini_txt += `   â•­â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â\n`
+                    ini_txt += `ââ”¤ Kereta Api : ${x.kereta_api}\n`
+                    ini_txt += `ââ”¤ Pesawat : ${x.pesawat}\n`
+                    ini_txt += `ââ”¤ Mobil : ${x.mobil}\n`
+                    ini_txt += `ââ”¤ Motor : ${x.motor}\n`
+                    ini_txt += `ââ”¤ Jalan Kaki : ${x.jalan_kaki}\n`
+                    ini_txt += `   â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â\n`
                     reply(ini_txt)
                     break
                 case 'urbandictionary':
@@ -1922,7 +1922,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                     quotes = quotes.result
                     author = quotes.by
                     quotes = quotes.quote
-                    reply(`_${quotes}_\n\n*― ${author}*`)
+                    reply(`_${quotes}_\n\n*â€• ${author}*`)
                     break
                 case 'quotesanime':
                     quotes = await fetchJson(`${apiUrl}/api/random/quotesnime?apikey=${apikey}`)
@@ -1931,7 +1931,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                     char = quotes.character
                     anime = quotes.anime
                     episode = quotes.episode
-                    reply(`_${quote}_\n\n*― ${char}*\n*― ${anime} ${episode}*`)
+                    reply(`_${quote}_\n\n*â€• ${char}*\n*â€• ${anime} ${episode}*`)
                     break
                 case 'quotesdilan':
                     quotedilan = await fetchJson(`${apiUrl}/api/quotes/dilan?apikey=${apikey}`)
@@ -2339,7 +2339,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                     await reysekha.sendMessage(from, ini_buffer, image, { quoted: rey })
                     break
                 case 'smoji':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} 😭`)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} ðŸ˜­`)
                     emoji = args[0]
                     try {
                         emoji = encodeURI(emoji[0])
@@ -2350,7 +2350,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                     await reysekha.sendMessage(from, ini_buffer, sticker, { quoted: rey })
                     break
                 case 'smoji2':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} 😭`)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} ðŸ˜­`)
                     emoji = args[0]
                     try {
                         emoji = encodeURI(emoji[0])
