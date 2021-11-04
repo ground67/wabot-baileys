@@ -212,7 +212,7 @@ async function starts() {
             var kuis = false
                // Debug bot
               if (budy.startsWith('$')){
-    	iif (sender.split("@")[0] != owner) return reply("Command only for owner bot")
+    	      if (sender.split("@")[0] != owner) return reply("Command only for owner bot")
       const cod = args.join(' ')
       exec(cod, (err, stdout) => {
       if(err) return reply(`${err}`)
