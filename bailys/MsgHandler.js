@@ -1,6 +1,70 @@
 // PROSESSS SABAR YAK XIXIXIX
 //process.on('uncaughtException', console.error) // safe log error
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*const sotoy = [
         '🍊 : 🍒 : 🍐 upss coba lagi',
         '🍒 : 🔔 : 🍊 upss coba lagi',
