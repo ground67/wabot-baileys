@@ -1,5 +1,7 @@
+process.on('uncaughtException', console.error) // safe log error
+
 const {
-  WAConnection,
+  WAConnection: _WAConnection,
   MessageType,
   Presence,
   MessageOptions,
@@ -40,6 +42,12 @@ const { default: axios } = require('axios')
 //apiUrl = config.apiUrl
 //apikey = config.apikey
 //owner = config.owner
+
+// Feature Random
+const bucinrandom = JSON.parse(fs.readFileSync('./lib/bucin.json'))
+const randomdilan = JSON.parse(fs.readFileSync('./lib/dilan.json'))
+const hekerbucin = JSON.parse(fs.readFileSync('./lib/hekerbucin.json'))
+const katailham = JSON.parse(fs.readFileSync('./lib/katailham.json'))
 
 // Database
 const tebakgambar = JSON.parse(fs.readFileSync('./database/tebakgambar.json'))
@@ -202,6 +210,17 @@ async function starts() {
             if (isGroup && isCmd) console.log(color(time, "white"), color("[ COMMAND ]", "aqua"), color(budy, "white"), "from", color(sender.split('@')[0], "yellow"), "in", color(groupName, "yellow"))
 
             var kuis = false
+               // Debug bot
+              if (budy.startsWith('$')){
+    	iif (sender.split("@")[0] != owner) return reply("Command only for owner bot")
+      const cod = args.join(' ')
+      exec(cod, (err, stdout) => {
+      if(err) return reply(`${err}`)
+      if (stdout) {
+      reply(`${stdout}`)
+      }
+      })
+    }
               // HMMM
              const sendMediaURL = async (to, url, text = "", mids = []) => {
       if (mids.length > 0) {
@@ -1122,6 +1141,59 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
                     await reysekha.sendMessage(from, thumbnail, image, { quoted: rey, caption: ini_txt })
                     break
 
+                      // Random text //
+                      case 'bucin':
+						hasil = bucinrandom[Math.floor(Math.random() * (bucinrandom.length))]
+						sendButMessage(from, `${hasil}`, `Made by Rey ❤️ `, [
+            {
+             buttonId: `${prefix}bucin`,
+               buttonText: {
+                 displayText: `next bucin`,
+               },
+               type: 1,
+            },
+          ]);
+          break;
+					case 'bacotandilan':
+						hasil = randomdilan[Math.floor(Math.random() * (randomdilan.length))]
+						sendButMessage(from, `${hasil}`, `Made by Rey ❤️ `, [
+            {
+             buttonId: `${prefix}bacotandilan`,
+               buttonText: {
+                 displayText: `next bacotan dilan`,
+               },
+               type: 1,
+            },
+          ]);
+          break;
+            case "hekerbucin":
+				hasil = hekerbucin[Math.floor(Math.random() * (hekerbucin.length))]
+				sendButMessage(from, `${hasil}`, `Made by Rey ❤️ `, [
+            {
+             buttonId: `${prefix}hekerbucin`,
+               buttonText: {
+                 displayText: `next hekerbucin`,
+               },
+               type: 1,
+            },
+          ]);
+          break
+                case 'quotes':
+				  data = fs.readFileSync('./lib/quotes.js');
+                  jsonData = JSON.parse(data);
+                  randIndex = Math.floor(Math.random() * jsonData.length);
+                  randKey = jsonData[randIndex];
+                  randQuote = 'Author: *'+randKey.author+'*\n\n*'+randKey.quotes+'*'
+                  sendButMessage(from, `${randQuote}`, `Made by Rey ❤️ `, [
+            {
+             buttonId: `${prefix}quotes`,
+               buttonText: {
+                 displayText: `next quotes`,
+               },
+               type: 1,
+            },
+          ]);
+          break
                     // AniManga //
                 case 'character':
                     if (args.length == 0) return reply(`Example: ${prefix + command} Miku Nakano`)
