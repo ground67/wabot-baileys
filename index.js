@@ -3,10 +3,11 @@ let path = require('path')
 let fs = require('fs')
 const CFonts = require('cfonts')
 
-CFonts.say('ya begitulah...', {
-    font: 'chrome',
-    align: 'center',
-    gradient: ['red', 'magenta']
+const CFonts = require('cfonts')
+CFonts.say('Erza bot', {
+  colors: ['#f2aa4c'],
+  font: 'block',
+  align: 'center',
 })
 
 function start(file) {
