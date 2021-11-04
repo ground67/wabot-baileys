@@ -1,0 +1,12 @@
+{
+    "apikey": "apirey",
+    "zeksKey": "reyterganz",
+    "hadiKey" : "hardianto",
+    "lolKey": "APIKEY",
+    "apiUrl": "https://api-reysekha.herokuapp.com",
+    "apiZeks": "https://api.zeks.me",
+    "apiHadi": "https://hardianto-chan.herokuapp.com",
+    "lolApi": "https://api.lolhuman.xyz",
+    "prefix": ".",
+    "owner": "YOUR-NUMBER"
+}
