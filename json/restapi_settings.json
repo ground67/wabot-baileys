@@ -5,7 +5,7 @@
         "Revkey": "ApiRevita",
         "Zekskey": "REGISTER",
         "Vezakey": "BUY",
-	"maxLimit": 30,
+	"Limit": 30,
 	"ownerList": ["628xxxxxx@s.whatsapp.net", "6282xxxxxx@s.whatsapp.net"],
 	"apiRey": "https://api-reysekha.herokuapp.com",
         "apiRev": "https://revita.herokuapp.com",
