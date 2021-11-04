@@ -1,10 +1,10 @@
 let { spawn } = require('child_process')
 let path = require('path')
 let fs = require('fs')
-const CFonts = require('cfonts')
+//const CFonts = require('cfonts')
 
 const CFonts = require('cfonts')
-CFonts.say('Erza bot', {
+CFonts.say('ERZA AND REY', {
   colors: ['#f2aa4c'],
   font: 'block',
   align: 'center',
