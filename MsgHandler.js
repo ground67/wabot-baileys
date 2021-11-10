@@ -608,7 +608,7 @@ const fvideo = (teks) => {
                 kuis = true
                 var { server, frontaddr, session, signature, question, step } = akinator[sender.split('@')[0]]
                 if (step == "0" && budy == "5") return reply("Maaf Anda telah mencapai pertanyaan pertama")
-                var ini_url = `https://api.lolhuman.xyz/api/akinator/answer?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
+                var ini_url = `${lolApi}/api/akinator/answer?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
                 var get_result = await fetchJson(ini_url)
                 var get_result = get_result.result
                 if (get_result.hasOwnProperty("name")) {
@@ -633,7 +633,7 @@ const fvideo = (teks) => {
                 ini_txt += "4 - Mungkin Tidak\n"
                 ini_txt += "5 - Kembali ke Pertanyaan Sebelumnya"
                 if (budy == "5") {
-                    var ini_url = `${apiUrl}/api/akinator/back?apikey=${apikey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
+                    var ini_url = `${lolApi}/api/akinator/back?apikey=${lolKey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
                     var get_result = await fetchJson(ini_url)
                     var get_result = get_result.result
                     var { question, _, step } = get_result
@@ -887,7 +887,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
         if (!isUrl(args[0]) && !args[0].includes("youtu.be"))
           return reply(mess.Iv);
         var anu = await fetchJson(
-          `https://hadi-api.herokuapp.com/api/ytaudio?url=${args[0]}`
+          `${apiHadi}/api/ytaudio?url=${args[0]}`
         );
         var info = anu.result
         var buffer = await getBuffer(info.album);
@@ -897,7 +897,7 @@ sendButLocation(from, `${menunya}`, `Made With By Rey `, {jpegThumbnail:gmbrny
         var gh = args.join("");
         var link = gh.split("|")[0];
         var tipe = gh.split("|")[1];
-        //https://api-reysekha.herokuapp.com/api/download/ytmp3?url=
+        ///api/download/ytmp3?url=
         var rey = await fetchJson(
           `https://hadi-api.herokuapp.com/api/${tipe}?url=${link}`
         );
