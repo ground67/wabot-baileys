@@ -1,1 +1,1 @@
-# whatsapp-bot-bailys
+# wabot-baileys
